@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: hotel
+  name: hotelfrontend
+  namespace: hotel-dev
+spec:
+  selector:
+    name: hotelfrontend
+  ports:
+  - port: 80
+    targetPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: hotel
+  name: hotelapi
+  namespace: hotel-dev
+spec:
+  selector:
+    name: hotelapi
+  ports:
+  - port: 8000
+    targetPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: hotel
+  name: hoteldb
+  namespace: hotel-dev
+spec:
+  selector:
+    name: hoteldb
+  ports:
+  - port: 3306
+    targetPort: 3306

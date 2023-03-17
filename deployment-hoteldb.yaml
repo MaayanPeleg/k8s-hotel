@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hoteldb
+  namespace: hotel-dev
+  labels:
+    app: hotel
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: hoteldb
+  template:
+    metadata:
+      labels:
+        name: hoteldb
+    spec:
+      containers:
+      - name: 'hoteldb'
+        image: 'maayanpeleg87/hotel-db:latest'
+        ports:
+        - containerPort: 3306
