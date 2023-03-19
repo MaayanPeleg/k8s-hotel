@@ -3,9 +3,8 @@ kind: Ingress
 metadata:
   name: hotel
   namespace: hotel-dev
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
 spec:
+  ingressClassName: nginx-service
   rules:
   - host: localhost
     http:
