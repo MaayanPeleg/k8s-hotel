@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  namespace: grafana
+  labels:
+    app: hotel
+spec:
+  selector:
+    matchLabels:
+      name: grafana
+  template:
+    metadata:
+      labels:
+        name: grafana
+    spec:
+      containers:
+      - name: 'grafana'
+        image: 'grafana/grafana:latest'
+        ports:
+        - containerPort: 3000
+        env:
+        - name: 'GF_SECURITY_ADMIN_PASSWORD'
+          value: 'admin'
+        - name: 'GF_INSTALL_PLUGINS'
+          value: 'grafana-clock-panel,grafana-simple-json-datasource'
+
+# Path: service-grafana.yaml
