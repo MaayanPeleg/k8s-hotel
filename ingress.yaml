@@ -27,7 +27,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: k8sdash.localhost
+  - host: kubernetes.localhost
     http:
       paths:
       - path: /
