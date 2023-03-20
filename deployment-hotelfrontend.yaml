@@ -18,6 +18,10 @@ spec:
       containers:
       - name: 'hotelfrontend'
         image: 'maayanpeleg87/hotel-frontend:latest'
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          readOnlyRootFilesystem: true
         ports:
         - containerPort: 5000
         env:
