@@ -10,7 +10,7 @@ spec:
   selector:
     name: hotelfrontend
   ports:
-  - port: 80
+  - port: 5000
     targetPort: 5000
 ---
 apiVersion: v1

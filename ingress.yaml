@@ -16,7 +16,7 @@ spec:
           service:
             name: hotelfrontend
             port:
-              number: 80
+              number: 5000
   - host: hotelapi.localhost
     http:
       paths:
