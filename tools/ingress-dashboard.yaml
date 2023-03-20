@@ -1,26 +1,6 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: grafana
-  namespace: devops-tools
-  annotations:
-    kubernetes.io/ingress.class: nginx
-spec:
-  rules:
-  - host: grafana.localhost
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: grafanaservice
-            port:
-              number: 3000
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
   name: dashboard
   namespace: kubernetes-dashboard
   annotations:

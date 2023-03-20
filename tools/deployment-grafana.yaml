@@ -20,8 +20,3 @@ spec:
         image: 'grafana/grafana:latest'
         ports:
         - containerPort: 3000
-        env:
-        - name: 'GF_SECURITY_ADMIN_PASSWORD'
-          value: 'admin'
-        - name: 'GF_INSTALL_PLUGINS'
-          value: 'grafana-clock-panel,grafana-simple-json-datasource'

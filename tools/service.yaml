@@ -4,7 +4,7 @@ metadata:
   annotations:
   labels:
     app: grafana
-  name: garafanaservice
+  name: grafanaservice
   namespace: devops-tools
 spec:
   selector:
