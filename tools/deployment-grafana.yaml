@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: grafana
-  namespace: grafana
+  namespace: devops-tools
   labels:
-    app: hotel
+    app: grafana
 spec:
+  replicas: 1
   selector:
     matchLabels:
       name: grafana
@@ -24,5 +25,3 @@ spec:
           value: 'admin'
         - name: 'GF_INSTALL_PLUGINS'
           value: 'grafana-clock-panel,grafana-simple-json-datasource'
-
-# Path: service-grafana.yaml
