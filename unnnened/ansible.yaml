@@ -1,0 +1,9 @@
+# code: language=ansible
+
+      
+ - name: xyz
+   host: localhost
+
+   tasks:
+      - name: "xyz"
+        shell: "echo 'xyz'"
