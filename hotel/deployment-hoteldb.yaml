@@ -14,6 +14,9 @@ spec:
     metadata:
       labels:
         name: hoteldb
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8080'
     spec:
       containers:
       - name: 'hoteldb'
