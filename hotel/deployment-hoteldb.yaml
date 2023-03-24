@@ -18,9 +18,5 @@ spec:
       containers:
       - name: 'hoteldb'
         image: 'maayanpeleg87/hotel-db:latest'
-        securityContext:
-          allowPrivilegeEscalation: false
-          runAsNonRoot: true
-          readOnlyRootFilesystem: true
         ports:
         - containerPort: 3306
