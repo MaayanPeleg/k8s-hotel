@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prometheus-configmap
-  namespace: devops-tools
+  namespace: prometheus
 data:
   prometheus.yml: |
     global:

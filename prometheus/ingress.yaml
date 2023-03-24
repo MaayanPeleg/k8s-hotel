@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: prometheus
-  namespace: devops-tools
+  namespace: prometheus
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
