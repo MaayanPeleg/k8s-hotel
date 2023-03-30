@@ -23,17 +23,16 @@ spec:
         env:
         - name: 'DATABASE_URL'
           value: 'hoteldb'
-        resourses:
-          liveinessProbe:
-            httpGet:
-              path: /
-              port: 8000
-            initialDelaySeconds: 30
-            periodSeconds: 10
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 8000
-            initialDelaySeconds: 30
-            periodSeconds: 10
-          restartPolicy: Always
+        liveinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        restartPolicy: Always

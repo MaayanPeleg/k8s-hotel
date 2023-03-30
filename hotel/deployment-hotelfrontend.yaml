@@ -25,17 +25,16 @@ spec:
           value: 'hotelapi'
         - name: 'PORT'
           value: '8000'
-        resourses:
-          liveinessProbe:
-            httpGet:
-              path: /
-              port: 5000
-            initialDelaySeconds: 30
-            periodSeconds: 10
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 5000
-            initialDelaySeconds: 30
-            periodSeconds: 10
-          restartPolicy: Always
+        liveinessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        restartPolicy: Always
