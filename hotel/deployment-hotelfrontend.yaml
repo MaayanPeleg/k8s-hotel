@@ -25,12 +25,12 @@ spec:
           value: 'hotelapi'
         - name: 'PORT'
           value: '8000'
-        #liveinessProbe:
-          #httpGet:
-            #path: /
-            #port: 5000
-          #initialDelaySeconds: 30
-          #periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /
