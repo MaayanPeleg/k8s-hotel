@@ -20,10 +20,10 @@ spec:
         image: 'prom/prometheus:v2.26.0'
         ports:
         - containerPort: 9090
-        volumeMounts:
-        - name: prometheus-config
-          mountPath: /etc/prometheus/
-      volumes:
-      - name: prometheus-config
-        configMap:
-          name: prometheus-configmap
+        #volumeMounts:
+        #- name: prometheus-config
+          #mountPath: /etc/prometheus/
+      #volumes:
+      #- name: prometheus-config
+        #configMap:
+          #name: prometheus-configmap
