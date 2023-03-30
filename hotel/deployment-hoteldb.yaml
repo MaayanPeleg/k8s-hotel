@@ -20,5 +20,4 @@ spec:
         image: 'maayanpeleg87/hotel-db:latest'
         ports:
         - containerPort: 3306
-        restartPolicy: Always
 
